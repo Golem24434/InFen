@@ -1,16 +1,41 @@
 #include <QCoreApplication>
 #include <QTextStream>
+#include <QImage>
+#include <QString>
+#include <QList>
 
-int main(int argc, char *argv[])
+#include "imgparse.h"
+
+using namespace Qt;
+
+int main()
 {
-    QCoreApplication app(argc, argv);
-
     QTextStream in(stdin);
     QTextStream out(stdout);
 
-    int a;
-    in >> a;
-    out << "Your penis is " << a << Qt::endl;
+    const QString imgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\";
+    QString imgName;
+    QImage img;
 
-    return app.exec();
+    out << "Input picture name: " << endl;
+    in >> imgName;
+    img.load(imgDir + imgName);
+
+    if (img.isNull()) {
+        out << "Cannot open image" << endl;
+        return 1;
+    } else {
+        out << "Image loaded successfully" << endl;
+    }
+
+    QImage scaledImg = img.scaled(160, 160);
+
+    if (!imgParse(scaledImg)) {
+        out << "Cannot parse image" << endl;
+        return 1;
+    } else {
+        out << "Image parsed successfully" << endl;
+    }
+
+    return 0;
 }
