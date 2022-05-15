@@ -3,10 +3,12 @@
 
 #include <QImage>
 #include <QColor>
+#include <QList>
 #include <vector>
 
-std::vector<std::vector<int>> imgParse(QImage img);
+QList<QImage> imgParse(QImage img);
 QImage normalizeImage(QImage img);
 std::vector<int> imgToPixels(QImage img);
+std::vector<std::vector<int>> imgsToObjects(QList<QImage> img);
 
 #endif // IMGPARSE_H

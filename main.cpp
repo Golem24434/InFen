@@ -31,7 +31,9 @@ int main()
 
     QImage normedImg = normalizeImage(img);
 
-    std::vector<std::vector<int>> objects = imgParse(normedImg);
+    QList<QImage> images = imgParse(normedImg);
+
+    std::vector<std::vector<int>> objects = imgsToObjects(images);
 
     if (objects.empty()) {
         out << "Cannot parse image" << endl;

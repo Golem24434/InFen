@@ -3,8 +3,8 @@
 #include <QRect>
 #include <QString>
 
-std::vector<std::vector<int>> imgParse(QImage img) {
-    std::vector<std::vector<int>> pixels(64);
+QList<QImage> imgParse(QImage img) {
+    QList<QImage> images;
     QRect cell;
     QImage subImg;
     const QString subImgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\cells\\";
@@ -13,10 +13,10 @@ std::vector<std::vector<int>> imgParse(QImage img) {
             cell.setRect(j * 20, i * 20, 20, 20);
             subImg = img.copy(cell);
             subImg.save(subImgDir + "cell " + QString::number(i) + "_" + QString::number(j) + ".jpg");
-            pixels[i * 8 + j] = imgToPixels(subImg);
+            images.append(subImg);
         }
     }
-    return pixels;
+    return images;
 }
 
 QImage normalizeImage(QImage img) {
@@ -34,4 +34,12 @@ std::vector<int> imgToPixels(QImage img) {
         }
     }
     return pixels;
+}
+
+std::vector<std::vector<int>> imgsToObjects(QList<QImage> imgs) {
+    std::vector<std::vector<int>> objects;
+    foreach(QImage i, imgs) {
+        objects.push_back(imgToPixels(i));
+    }
+    return objects;
 }
