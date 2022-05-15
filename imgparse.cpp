@@ -7,12 +7,12 @@ QList<QImage> imgParse(QImage img) {
     QList<QImage> images;
     QRect cell;
     QImage subImg;
-    const QString subImgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\cells\\";
+    //const QString subImgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\cells\\";
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             cell.setRect(j * 20, i * 20, 20, 20);
             subImg = img.copy(cell);
-            subImg.save(subImgDir + "cell " + QString::number(i) + "_" + QString::number(j) + ".jpg");
+            //subImg.save(subImgDir + "cell " + QString::number(i) + "_" + QString::number(j) + ".jpg");
             images.append(subImg);
         }
     }

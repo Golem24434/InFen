@@ -10,37 +10,30 @@
 using namespace Qt;
 
 int main() {
+    QTextStream in(stdin);
+    QTextStream out(stdout);
 
-<<<<<<< HEAD
-=======
-    const QString imgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\";
     QString imgName;
-    QImage img;
+    out << "Input full image name: " << endl;
+    imgName = in.readLine();
 
-    out << "Input picture name: " << endl;
-    in >> imgName;
-    img.load(imgDir + imgName);
-
+    QImage img(imgName);
     if (img.isNull()) {
         out << "Cannot open image" << endl;
-        return 1;
-    } else {
-        out << "Image loaded successfully" << endl;
+        return -1;
     }
 
-    QImage normedImg = normalizeImage(img);
+    img = normalizeImage(img);
+    if (img.isNull()) {
+        out << "Cannot normalize image" << endl;
+        return -1;
+    }
 
-    QList<QImage> images = imgParse(normedImg);
-
-    std::vector<std::vector<int>> objects = imgsToObjects(images);
-
-    if (objects.empty()) {
+    QList<QImage> cells = imgParse(img);
+    if (cells.isEmpty()) {
         out << "Cannot parse image" << endl;
-        return 1;
-    } else {
-        out << "Image parsed successfully" << endl;
+        return -1;
     }
 
-    return 0;
->>>>>>> imgparser
+    std::vector<std::vector<int>> objects = imgsToObjects(cells);
 }
