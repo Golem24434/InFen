@@ -14,13 +14,12 @@ int main()
     QTextStream in(stdin);
     QTextStream out(stdout);
 
-    const QString imgDir = "C:\\Users\\normp\\Documents\\Programming\\Technopark\\Chess in FEN\\Images\\";
     QString imgName;
-    QImage img;
+    out << "Input file name: " << endl;
+    imgName = in.readLine();
 
-    out << "Input picture name: " << endl;
-    in >> imgName;
-    img.load(imgDir + imgName);
+    QImage img;
+    img.load(imgName);
 
     if (img.isNull()) {
         out << "Cannot open image" << endl;
