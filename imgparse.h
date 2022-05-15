@@ -2,7 +2,11 @@
 #define IMGPARSE_H
 
 #include <QImage>
+#include <QColor>
+#include <vector>
 
-bool imgParse(QImage img);
+std::vector<std::vector<int>> imgParse(QImage img);
+QImage normalizeImage(QImage img);
+std::vector<int> imgToPixels(QImage img);
 
 #endif // IMGPARSE_H

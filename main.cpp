@@ -3,6 +3,7 @@
 #include <QImage>
 #include <QString>
 #include <QList>
+#include <vector>
 
 #include "imgparse.h"
 
@@ -28,9 +29,11 @@ int main()
         out << "Image loaded successfully" << endl;
     }
 
-    QImage scaledImg = img.scaled(160, 160);
+    QImage normedImg = normalizeImage(img);
 
-    if (!imgParse(scaledImg)) {
+    std::vector<std::vector<int>> objects = imgParse(normedImg);
+
+    if (objects.empty()) {
         out << "Cannot parse image" << endl;
         return 1;
     } else {
