@@ -32,7 +32,7 @@ std::vector<std::vector<int>> imgParse(QImage img) {
 
             file << "cell " + QString::number(i) + "_" + QString::number(j) << Qt::endl;
             for (int k = 0; k < 20 * 20; k++) {
-                file << pixels[i * 8 + j][k] << ' ';
+                file << pixels[i * 8 + j][k] << ", ";
                 if ((k + 1) % 20 == 0) {
                     file << Qt::endl;
                 }
