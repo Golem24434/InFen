@@ -520,76 +520,99 @@ int definition_of_objects(vector<int> input_object) {
     return temp_index;
 }
 
+#define EMPTY_PLACE '#'
 
-
-void definition_of_diagrams(vector<vector<int>> input_diagram) {
+vector<char> definition_of_diagrams(vector<vector<int>> input_diagram) {
+    vector<char> fenPreCode(64);
     for (int i = 0; i < 64; ++i) {
         switch (definition_of_objects(input_diagram[i])) {
             case 0:
-                cout << "br ";
+                cout << "r ";
+                fenPreCode[i] = 'r';
             break;
             case 1:
-                cout << "br ";
+                cout << "r ";
+                fenPreCode[i] = 'r';
             break;
             case 2:
-                cout << "bh ";
+                cout << "h ";
+                fenPreCode[i] = 'h';
             break;
             case 3:
-                cout << "bh ";
+                cout << "h ";
+                fenPreCode[i] = 'h';
             break;
             case 4:
-                cout << "bb ";
+                cout << "b ";
+                fenPreCode[i] = 'b';
             break;
             case 5:
-                cout << "bb ";
+                cout << "b ";
+                fenPreCode[i] = 'b';
             break;
             case 6:
-                cout << "bk ";
+                cout << "k ";
+                fenPreCode[i] = 'k';
             break;
             case 7:
-                cout << "bq ";
+                cout << "q ";
+                fenPreCode[i] = 'q';
             break;
             case 8:
-                cout << "bp ";
+                cout << "p ";
+                fenPreCode[i] = 'p';
             break;
             case 9:
-                cout << "bp ";
+                cout << "p ";
+                fenPreCode[i] = 'p';
             break;
             case 10:
-                cout << "b ";
+                cout << "# ";
+                fenPreCode[i] = EMPTY_PLACE;
             break;
             case 11:
-                cout << "w ";
+                cout << "# ";
+                fenPreCode[i] = EMPTY_PLACE;
             break;
             case 12:
-                cout << "wr ";
+                cout << "R ";
+                fenPreCode[i] = 'R';
             break;
             case 13:
-                cout << "wr ";
+                cout << "R ";
+                fenPreCode[i] = 'R';
             break;
             case 14:
-                cout << "wh ";
+                cout << "H ";
+                fenPreCode[i] = 'H';
             break;
             case 15:
-                cout << "wh ";
+                cout << "H ";
+                fenPreCode[i] = 'H';
             break;
             case 16:
-                cout << "wb ";
+                cout << "B ";
+                fenPreCode[i] = 'B';
             break;
             case 17:
-                cout << "wb ";
+                cout << "B ";
+                fenPreCode[i] = 'B';
             break;
             case 18:
-                cout << "wk ";
+                cout << "K ";
+                fenPreCode[i] = 'K';
             break;
             case 19:
-                cout << "wq ";
+                cout << "Q ";
+                fenPreCode[i] = 'Q';
             break;
             case 20:
-                cout << "wp ";
+                cout << "P ";
+                fenPreCode[i] = 'P';
             break;
             case 21:
-                cout << "wp ";
+                cout << "P ";
+                fenPreCode[i] = 'P';
             break;
         }
         //cout << definition_of_objects(input_diagram[i]) << " ";
@@ -597,4 +620,5 @@ void definition_of_diagrams(vector<vector<int>> input_diagram) {
             cout << endl;
         }
     }
+    return fenPreCode;
 }

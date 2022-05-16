@@ -4,6 +4,6 @@
 #include <vector>
 
 int definition_of_objects(std::vector<int> input_object);
-void definition_of_diagrams(std::vector<std::vector<int>> input_diagram);
+std::vector<char> definition_of_diagrams(std::vector<std::vector<int>> input_diagram);
 
 #endif // DEFENITION_H
