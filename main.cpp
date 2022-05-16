@@ -6,6 +6,7 @@
 #include <vector>
 
 #include "imgparse.h"
+#include "defenition.h"
 
 using namespace Qt;
 
@@ -36,4 +37,6 @@ int main() {
     }
 
     std::vector<std::vector<int>> objects = imgsToObjects(cells);
+
+    definition_of_diagrams(objects);
 }
