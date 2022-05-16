@@ -28,6 +28,8 @@ string FEN_maker(vector <char> matrix) {
     answer.push_back(' ');
     answer.push_back('-');
     answer.push_back(' ');
+    answer.push_back('-');
+    answer.push_back(' ');
     answer.push_back('0');
     answer.push_back(' ');
     answer.push_back('1');
