@@ -18,10 +18,16 @@ string FEN_maker(vector <char> matrix) {
                 if (count != 0) {
                     answer.push_back((char)(count + 48));
                 }
+                answer.push_back(matrix[i * 8 + j]);
                 count = 0;
             }
         }
-        answer.push_back('/');
+        if (count != 0) {
+            answer.push_back((char)(count + 48));
+        }
+        if (i != 7) {
+            answer.push_back('/');
+        }
     }
     answer.push_back(' ');
     answer.push_back('w');
