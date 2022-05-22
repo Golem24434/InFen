@@ -4,9 +4,11 @@
 #include <QString>
 #include <QList>
 #include <vector>
+#include <iostream>
 
 #include "imgparse.h"
 #include "defenition.h"
+#include "fen_maker.h"
 
 using namespace Qt;
 
@@ -38,5 +40,10 @@ int main() {
 
     std::vector<std::vector<int>> objects = imgsToObjects(cells);
 
-    definition_of_diagrams(objects);
+    std::vector<char> fenPreCode = definition_of_diagrams(objects);
+
+    std::string FEN = FEN_maker(fenPreCode);
+
+    std::cout << std::endl;
+    std::cout << "FEN code: " << FEN << std::endl;
 }

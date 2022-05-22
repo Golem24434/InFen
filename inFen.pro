@@ -9,6 +9,7 @@ CONFIG -= app_bundle
 
 SOURCES += \
         defenition.cpp \
+        fen_maker.cpp \
         imgparse.cpp \
         main.cpp
 
@@ -19,4 +20,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     defenition.h \
+    fen_maker.h \
     imgparse.h

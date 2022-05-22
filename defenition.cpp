@@ -524,6 +524,7 @@ int definition_of_objects(vector<int> input_object) {
 
 vector<char> definition_of_diagrams(vector<vector<int>> input_diagram) {
     vector<char> fenPreCode(64);
+    cout << endl;
     for (int i = 0; i < 64; ++i) {
         switch (definition_of_objects(input_diagram[i])) {
             case 0:
