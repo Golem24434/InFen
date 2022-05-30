@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>korona_bez_1.png</file>
+    </qresource>
+</RCC>

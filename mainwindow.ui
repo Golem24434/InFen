@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1007</width>
+    <height>779</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>korona_bez_1.png</normaloff>korona_bez_1.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #394048;
+
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="main">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Apple Color Emoji</family>
+            <pointsize>36</pointsize>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font-size :400%;
+color: white;
+text-align: center;</string>
+          </property>
+          <property name="text">
+           <string>Chess diagramm -&gt; FENotaion</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Apple Color Emoji</family>
+            <pointsize>24</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">text-align: center;
+color: white;
+</string>
+          </property>
+          <property name="text">
+           <string>Upload a file of an image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Apple Color Emoji</family>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: white;
+</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="font">
+             <font>
+              <family>Apple Color Emoji</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+	color: white;
+	background-color: #1db6b6;
+	border:none;
+	padding:12px;
+	border-radius:15px;
+	font-size:16px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+   QPushButton:hover {
+	color: white;
+	background-color: #24d5d5;
+}</string>
+            </property>
+            <property name="text">
+             <string>Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="font">
+             <font>
+              <family>Apple Color Emoji</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+            color: white;
+       background-color: #1db6b6;
+            border:none;
+            padding:12px;
+            border-radius:15px;
+            font-size:16px;
+	margin-left: 50px;
+	margin-right: 50px;
+         }
+   QPushButton:hover {
+             color: white;
+        background-color: #24d5d5;
+         }</string>
+            </property>
+            <property name="text">
+             <string>Upload</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="font">
+             <font>
+              <family>Apple Color Emoji</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+            color: white;
+       background-color: #1db6b6;
+            border:none;
+            padding:12px;
+            border-radius:15px;
+            font-size:16px;
+	margin-left: 50px;
+	margin-right: 50px;
+         }
+   QPushButton:hover {
+             color: white;
+        background-color: #24d5d5;
+         }</string>
+            </property>
+            <property name="text">
+             <string>Confirm</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="maximumSize">
+       <size>
+        <width>1500</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Apple Color Emoji</family>
+        <pointsize>24</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>18</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: white;
+border: none;</string>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="maximumSize">
+       <size>
+        <width>2000000</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Apple Color Emoji</family>
+        <pointsize>-1</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+            color: white;
+       background-color: #1db6b6;
+            border:none;
+            padding:12px;
+            border-radius:15px;
+            font-size:16px;
+		   margin-bottom: 30px;
+			margin-top: 5px;
+margin-left: 350px;
+margin-right: 350px;
+         }
+   QPushButton:hover {
+             color: white;
+        background-color: #24d5d5;
+         }
+
+</string>
+      </property>
+      <property name="text">
+       <string>Copy</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_5">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Apple Color Emoji</family>
+        <pointsize>24</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:white;
+</string>
+      </property>
+      <property name="text">
+       <string>You can use your FENotation at one of this chess services! </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="pushButton_7">
+        <property name="font">
+         <font>
+          <family>Apple Color Emoji</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+            color: white;
+       background-color: #1db6b6;
+            border:none;
+            padding:12px;
+            border-radius:15px;
+            font-size:16px;
+margin-left: 50px;
+margin-right: 50px;
+         }
+   QPushButton:hover {
+             color: white;
+        background-color: #24d5d5;
+         }</string>
+        </property>
+        <property name="text">
+         <string>dailychess.com</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_6">
+        <property name="font">
+         <font>
+          <family>Apple Color Emoji</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color: white;
+	background-color: #1db6b6;
+	border:none;
+	padding:12px;
+	border-radius:15px;
+ 	font-size:16px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+   QPushButton:hover {
+             color: white;
+        background-color: #24d5d5;
+         }</string>
+        </property>
+        <property name="text">
+         <string>chess.com</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="font">
+         <font>
+          <family>Apple Color Emoji</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+	color: white;
+	background-color: #1db6b6;
+	border:none;
+	padding:12px;
+	border-radius:15px;
+	font-size:16px;
+	margin-left: 50px;
+	margin-right: 50px;
+}
+   QPushButton:hover {
+	color: white;
+background-color: #24d5d5;
+}</string>
+        </property>
+        <property name="text">
+         <string>lichess.org</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1007</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
